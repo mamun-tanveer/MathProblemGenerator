@@ -58,6 +58,11 @@ namespace MathProblemGenerator
             return expectedAnswer;
         }
 
+        public T PerformAction<T>(IProblemAction<T> action)
+        {
+            return action.Execute(this);
+        }
+
 
     private bool compareStrings(string answer, string expectedAnswer)
         {

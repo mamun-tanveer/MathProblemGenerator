@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ArithmeticProblem.cs" />
     <Compile Include="IProblem.cs" />
+    <Compile Include="IProblemAction.cs" />
     <Compile Include="ITestProblem.cs" />
     <Compile Include="Operation.cs" />
     <Compile Include="OperationFactory.cs" />

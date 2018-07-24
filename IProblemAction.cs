@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace MathProblemGenerator
 {
-    public interface IProblem
+    public interface IProblemAction<TReturn>
     {
-        IEnumerable<string> Display();
-
-        bool CheckAnswer(string answer);
-
-        T PerformAction<T>(IProblemAction<T> action);
+        TReturn Execute(IProblem problem);
     }
 }
