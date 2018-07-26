@@ -114,7 +114,12 @@ namespace WindowsApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            displayNextProblem();
+        }
 
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Properties.Settings.Default.Save();
         }
     }
 }
