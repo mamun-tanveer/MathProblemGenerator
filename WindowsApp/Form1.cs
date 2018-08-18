@@ -61,11 +61,12 @@ namespace WindowsApp
         private void displayNextProblem()
         {
             //get the next problem
-            _CurrentProblem = ProblemFactory.GetArithmeticProblem<int>(getNextOperation(), 2, 100, false);
+            _CurrentProblem = ProblemFactory.GetArithmeticProblem<int>(getNextOperation(), 2, 20, false);
             string[] lines = _CurrentProblem.Display().ToArray();
             if (lines.Length > 0) lines[0] = lines.First().Remove(0, 1); //remove the first symbol
             ProblemBox.Lines = lines;
             AnswerBox.Text = string.Empty;
+            AnswerBox.Focus();
             _Timer.Restart();
         }
 
